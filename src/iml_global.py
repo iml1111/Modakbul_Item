@@ -12,10 +12,9 @@ def mday(day):
 	date = now.strftime("%Y-%m-%d %H:%M:%S")
 
 	return date
-def date_format(year, month, day, hour = "00", min = "00", sec = "00"):
-	string = year + "-" + month + "-" + day
-	string += " " + hour + ":" + min + ":" + sec
-	return string
+def date_format(date_str):
+	if len(date_str) == 10:
+		return date_str + " 00:00:00"
 
 def domain(url):
 	return url.split('/')[0] + '//' + url.split('/')[2]
