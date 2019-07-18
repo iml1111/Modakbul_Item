@@ -10,7 +10,7 @@ import detizen
 import indeed
 warnings.filterwarnings("ignore")
 
-def main():
+def crawl():
 	post_list = []
 	print("start")
 	for idx, target in enumerate(urls):
@@ -22,7 +22,7 @@ def main():
 	with open("output/output.json", 'w') as outfile:
 		json.dump(post_list, outfile)
 	#Output Here
-	#print(post_list)
+	return post_list
 
 if __name__ == '__main__':
 	pass#main()
