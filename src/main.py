@@ -14,14 +14,12 @@ def crawl():
 	post_list = []
 	print("start")
 	for idx, target in enumerate(urls):
-		#if idx != 2: continue
 		print("\n# " + target + " Crawling...")
 		code = target.split("_")[0]
 		code += ".proc('" + urls[target] + "')"
 		post_list += eval(code)
-	with open("output/output.json", 'w') as outfile:
-		json.dump(post_list, outfile)
-	#Output Here
+	#with open("output/output.json", 'w') as outfile:
+	#	json.dump(post_list, outfile)
 	return post_list
 
 if __name__ == '__main__':

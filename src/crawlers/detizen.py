@@ -5,8 +5,8 @@ def proc(url):
 	result = []
 	while(True):
 		print("## " + str(index) + " Page")
-		temp, quit = get_posts(url + str(index))
-		if quit or (not temp): break
+		temp = get_posts(url + str(index))
+		if not temp: break
 		result += temp
 		index += 1
 	return result
@@ -19,11 +19,11 @@ def get_posts(url):
 		tag_ = tag.select("h4 > a")[0]
 		post_url = domain(url) + tag_.attrs['href']
 		temp = get_post(post_url)
-		if temp is None: return result, True
+		if not temp: continue
 		print(temp['title'], temp['date'])
 		result += [temp]
 
-	return result, False
+	return result
 
 def get_post(url):
 	soup = req.get_soup(url)
@@ -32,7 +32,8 @@ def get_post(url):
 	date = date_format(date.split("~ ")[1][:10])
 	content = soup.select("ul.summary-info")[0].get_text()
 	if today() > date: return None
-	return {"title":title,
-			"date":date,
-			"content":content,
-			'url':url}
+	return {"title":title.strip(),
+			"date":date.strip(),
+			"content":content.strip(),
+			'url':url,
+			"tag":"공모전"}

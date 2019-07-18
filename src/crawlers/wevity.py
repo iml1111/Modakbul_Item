@@ -30,7 +30,8 @@ def get_post(url):
 	date = date_format(date.split("~ ")[1][:10])
 	content = soup.select("div#viewContents")[0].get_text()
 	if today() > date: return None
-	return {"title":title,
-			"date":date,
-			"content":content,
-			"url":url}
+	return {"title":title.strip(),
+			"date":date.strip(),
+			"content":content.strip(),
+			"url":url,
+			"tag":"공모전"}

@@ -15,7 +15,7 @@ def mday(day):
 def date_format(date_str):
 	date_str = date_str.replace(".","-")
 	if len(date_str) == 10:
-		return date_str + " 00:00:00"
+		return date_str + " 23:59:59"
 
 def domain(url):
 	url_ = url.split("/")
