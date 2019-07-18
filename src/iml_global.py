@@ -13,8 +13,13 @@ def mday(day):
 
 	return date
 def date_format(date_str):
+	date_str = date_str.replace(".","-")
 	if len(date_str) == 10:
 		return date_str + " 00:00:00"
 
 def domain(url):
-	return url.split('/')[0] + '//' + url.split('/')[2]
+	url_ = url.split("/")
+	result = url_[0] + "//"
+	for i in url_[2:-1]:
+		result += i + "/"
+	return result

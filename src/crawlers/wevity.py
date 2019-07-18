@@ -32,4 +32,5 @@ def get_post(url):
 	if today() > date: return None
 	return {"title":title,
 			"date":date,
-			"content":content}
+			"content":content,
+			"url":url}

@@ -1,4 +1,5 @@
 import iml_global
+import req
 from urls import urls
 import warnings
 from pprint import pprint
@@ -6,15 +7,23 @@ import json
 #crawl_list
 import wevity
 import detizen
+import indeed
+warnings.filterwarnings("ignore")
 
-if __name__ == '__main__':
-	warnings.filterwarnings("ignore")
+def main():
 	post_list = []
 	print("start")
-	for i in urls:
-		print("\n# " + i + " Crawling...")
-		code = i.split("_")[0]
-		code += ".proc('" + urls[i] + "')"
+	for idx, target in enumerate(urls):
+		#if idx != 2: continue
+		print("\n# " + target + " Crawling...")
+		code = target.split("_")[0]
+		code += ".proc('" + urls[target] + "')"
 		post_list += eval(code)
-	with open("output/" + i + '.json', 'w') as outfile:
+	with open("output/output.json", 'w') as outfile:
 		json.dump(post_list, outfile)
+	#Output Here
+	#print(post_list)
+
+if __name__ == '__main__':
+	pass#main()
+	
