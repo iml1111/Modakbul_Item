@@ -20,6 +20,7 @@ def crawl():
 		post_list += eval(code)
 	#with open("output/output.json", 'w') as outfile:
 	#	json.dump(post_list, outfile)
+	# title, content, date, url, tag
 	return post_list
 
 if __name__ == '__main__':
