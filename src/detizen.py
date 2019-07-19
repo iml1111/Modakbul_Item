@@ -30,10 +30,12 @@ def get_post(url):
 	title = soup.select("span.on")[0].get_text()
 	date = soup.find("th", text = "기간").parent.select("td")[0].get_text()
 	date = date_format(date.split("~ ")[1][:10])
+	img_url = main_domain(url) + soup.select("div.poster > img")[0].attrs['src'][1:]
 	content = soup.select("ul.summary-info")[0].get_text()
 	if today() > date: return None
 	return {"title":title.strip(),
 			"date":date.strip(),
 			"content":content.strip(),
 			'url':url,
-			"tag":"공모전"}
+			"img_url":img_url,
+			"tag":["공모전","외부사이트"]}

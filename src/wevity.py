@@ -34,4 +34,4 @@ def get_post(url):
 			"date":date.strip(),
 			"content":content.strip(),
 			"url":url,
-			"tag":"공모전"}
+			"tag":["공모전","외부사이트"]}

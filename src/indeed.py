@@ -22,7 +22,7 @@ def get_posts(url):
 				"date":today(),
 				"content":"인디드 취업 정보",
 				"url":post_url,
-				"tag":"취업"}
+				"tag":["취업","외부사이트"]}
 		print(temp['title'], temp['date'])
 		result += [temp]
 	return result

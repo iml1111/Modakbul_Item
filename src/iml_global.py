@@ -17,6 +17,12 @@ def date_format(date_str):
 	if len(date_str) == 10:
 		return date_str + " 23:59:59"
 
+def main_domain(url):
+	url_ = url.split("/")
+	result = url_[0] + "//"
+	result += url_[2] + "/"
+	return result
+
 def domain(url):
 	url_ = url.split("/")
 	result = url_[0] + "//"
