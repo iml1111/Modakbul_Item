@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>그래프.js 테스트</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js" integrity="sha256-qSIshlknROr4J8GMHRlW3fGKrPki733tLq+qeMCR05Q=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css" integrity="sha256-IvM9nJf/b5l2RoebiFno92E5ONttVyaEEsdemDC6iQA=" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" integrity="sha256-arMsf+3JJK2LoTGqxfnuJPFTU4hAK57MtIPdFpiHXOU=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+	<script src="/static/js/graph_.js" type="text/javascript"></script>
+</head>
+<body style="background-color: #494E52">
+
+
+<!-- 히스토그램 -->
+<!-- 해당 캔버스는 크기 컨트롤 불가능, div로 씌워서 컨트롤 ㄱㄱ -->
+<div class="chart-container" style="position: relative; ">
+<canvas id="hist1"width="auto" height="auto"></canvas>
+</div>
+<script>
+hist(
+	"hist1", //해당 캔버스 아이디
+	"종종 이용하는 학교 관련 사이트에는 무엇이 있나요? (중복 체크 가능)", // 없으면 ""
+	['세종대 메인 홈페이지', '학술정보원', '학과 홈페이지', '학생회 홈페이지(총 학생회, 과 모두 포함)', '대학일자리사업단 or 학생경력개발시스템', '없음'], //레이블
+	[12, 19, 3, 5, 4, 3],				// 각 레이블의 값
+	['#FF6384',        // 각 막대의 색깔(모든 리스트의 길이는 같게)
+    '#36A2EB',
+    '#FFCE56',
+    '#4BC0C0',
+    '#9966FF',
+    '#FF9F40'],
+    20,  // 제목폰트
+    20,  // 라벨 폰트
+    "#e2e2e2" // 모든 글씨 색깔
+    );
+</script>
+
+
+<br>
+<br><br>
+<br>
+<!-- 원통 그래프 -->
+<div class="chart-container" style="position: relative;">
+<canvas id="por1"width="auto" height="auto"></canvas>
+</div>
+<script>
+pie(
+	"por1", //해당 캔버스 아이디
+	"종종 이용하는 학교 관련 사이트에는 무엇이 있나요? (중복 체크 가능)", // 없으면 ""
+	['세종대 메인 홈페이지', '학술정보원', '학과 홈페이지', '학생회 홈페이지(총 학생회, 과 모두 포함)', '대학일자리사업단 or 학생경력개발시스템', '없음'], //레이블
+	[12, 19, 3, 5, 4, 3],				// 각 레이블의 값
+	['#FF6384',        // 각 막대의 색깔(모든 리스트의 길이는 같게)
+    '#36A2EB',
+    '#FFCE56',
+    '#4BC0C0',
+    '#9966FF',
+    '#FF9F40'],
+    20,  // 제목폰트
+    20,  // 라벨 폰트
+    "#e2e2e2" // 모든 글씨 색깔
+    );
+</script>
+
+
+
+
+<br>
+<br><br>
+<br>
+<!-- 선형 그래프 -->
+<div class="chart-container" style="position: relative;">
+<canvas id="line1"width="auto" height="auto"></canvas>
+</div>
+<script>
+line(
+	"line1", //해당 캔버스 아이디
+	"종종 이용하는 학교 관련 사이트에는 무엇이 있나요? (중복 체크 가능)", // 없으면 ""
+	['세종대 메인 홈페이지', '학술정보원', '학과 홈페이지', '학생회 홈페이지(총 학생회, 과 모두 포함)', '대학일자리사업단 or 학생경력개발시스템', '없음'], //레이블
+	[12, 19, 3, 5, 4, 3],				// 각 레이블의 값
+	'#36A2EB',
+    20,  // 제목폰트
+    20,  // 라벨 폰트
+    "#e2e2e2" // 모든 글씨 색깔
+    );
+</script>
+
+
+
+
+
+</body>
+</html>
