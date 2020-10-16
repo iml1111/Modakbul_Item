@@ -2,6 +2,7 @@
 세종대학교 SW융합대학 홈페이지 "모닥불"
 
 ## INTRO
+![img](https://gblobscdn.gitbook.com/assets%2F-Lk4yfhdwc6qCX9Adhlj%2F-LlJIOasCvZpom6IZv8i%2F-LlJJh6Vdg-5IQw8zz2l%2Fimage.png?alt=media&token=bcacc680-dbd3-4408-a389-1c5176913694)
 본 프로젝트는 소프트웨어융합대학 제 3대 학생회 "번영"에서 주최하는 공모전 "웹으로 소융대를 설명하라"를 위해 수행된다. 
 공모전의 주제로 기존의 소프트웨어 융합 대학 웹 페이지를 분석하고 개선점을 도출한 후,  
 해당 솔루션을 바탕으로 새로운 웹 서비스를 개발한다.  
@@ -15,7 +16,11 @@
 
 공모전의 룰에 따라 기존 "번영" 학생회가 운영하고 있는 소융대 홈페이지를 분석하였고 몇 가지 문제점을 찾을 수 있었다. 대표적인 문제점은 다음과 같다.
 
-‌
+# 시스템 구조
+
+![img](https://gblobscdn.gitbook.com/assets%2F-Lk4yfhdwc6qCX9Adhlj%2F-LlHTRkkpElHP9rwNGOo%2F-LlHsY1TwD809BqhXhjX%2Fimage.png?alt=media&token=0f00c3ca-2e50-42c1-b7ae-edfc2dbe2a07)
+
+
 
 # **기존의 문제점**
 
